@@ -12,12 +12,16 @@ var  asies;
 for (let index = 0; index < elementos.length; index++) {
   elementos[index].addEventListener('click', ()=>{  
     if(!cambio){
-      nume1 = ''; 
+      if(sumatoria){
+        nume1 = ''; 
+      }
       respuesta.innerHTML= nume1 + elementos[index].innerHTML;
       nume1= nume1 + elementos[index].innerHTML; 
       console.log(nume1);
     }else{
-      nume2 = '';
+      if(!sumatoria){
+        nume2 = ''; 
+      } 
       respuesta.innerHTML= nume2 + elementos[index].innerHTML;
       nume2= nume2 + elementos[index].innerHTML; 
       console.log(nume2+'aloi');
@@ -37,6 +41,8 @@ igual.addEventListener('click', ()=>{
   var segundo = parseInt(nume2); 
   if(sumatoria){
     asies= suma(primero, segundo);
+    nume1 = ''; 
+    nume2 = ''; 
   }
   respuesta.innerHTML= asies; 
   cambio = false; 
