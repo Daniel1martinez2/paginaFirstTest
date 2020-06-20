@@ -2,6 +2,7 @@ var elementos= document.querySelectorAll('.nume');
 var sumando = document.querySelector('.suma');  
 var restando = document.querySelector('.resta');  
 var igual = document.querySelector('.igual');  
+var ac = document.querySelector('.borra'); 
 var respuesta = document.querySelector('.respuesta'); 
 var nume1 = ''; 
 var nume2 = ''; 
@@ -48,6 +49,13 @@ igual.addEventListener('click', ()=>{
   cambio = false; 
   sumatoria= false; 
 });
+
+ac.addEventListener('click',()=>{
+  nume1 = ''; 
+  nume2 = ''; 
+  respuesta.innerHTML=''; 
+}); 
+
 
 respuesta.innerHTML= ''; 
 
